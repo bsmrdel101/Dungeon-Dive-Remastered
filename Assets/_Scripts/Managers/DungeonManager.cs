@@ -12,4 +12,14 @@ public class DungeonManager : MonoBehaviour
     {
         
     }
+
+    // Takes in two tile positions
+    // Returns the distance between the tiles
+    public int DistanceBetweenTwoPoints(Transform pos1, Transform pos2)
+    {
+        if (Mathf.Abs(pos2.position.x - pos1.position.x) == Mathf.Abs(pos2.position.y - pos1.position.y))
+            return (int)Mathf.Abs(pos2.position.x - pos1.position.x);
+        else
+            return (int)(Mathf.Abs(Mathf.FloorToInt(Mathf.Sqrt((Mathf.Pow(pos2.position.x - pos1.position.x, 2)) + (Mathf.Pow(pos2.position.y - pos1.position.y, 2))))));
+    }
 }
