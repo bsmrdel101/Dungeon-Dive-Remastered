@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 13724
+  controlID: 58
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 13725
+  controlID: 150
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 13726
+  controlID: 151
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -190,8 +190,8 @@ MonoBehaviour:
     y: 0
     width: 244
     height: 560
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -216,8 +216,8 @@ MonoBehaviour:
     y: 0
     width: 695
     height: 560
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 13684
+  controlID: 69
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -322,8 +322,8 @@ MonoBehaviour:
     y: 0
     width: 463
     height: 387
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
@@ -348,8 +348,8 @@ MonoBehaviour:
     y: 0
     width: 459
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 23}
   m_Panes:
   - {fileID: 23}
@@ -479,9 +479,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 8adffcff
-      m_LastClickedID: -204918
-      m_ExpandedIDs: 1ae2fcff58e2fcfffae2fcff14edfcff1cf6fcffbef6fcffcc00fdff500ffdfff20ffdffe619fdff7222fdff1423fdfffc2cfdff2c39fdffce39fdffa243fdfff44bfdff964cfdff5e56fdff0a5dfdffac5dfdff5267fdffc473fdff6674fdff007efdff4e86fdfff086fdff8a90fdff2ea2fdffd0a2fdff52acfdff62b4fdff04b5fdff7abefdffb8c6fdff5ac7fdffaad0fdff48defdffeadefdff42e8fdff44f0fdffe6f0fdff32fafdff3c02feffde02feff040cfeffbcefffffa6f2ffff24fbffff546f0000586f0000786f0000b075000000760000047600002476000046a60100c0a60100d0a6010052ac0100ccac0100dcac01004aaf0100c4af0100d4af01002cb50100a6b50100b6b501001cbb010096bb0100a6bb01001ac1010070c1010094c10100a4c10100
+      m_SelectedIDs: a6e4feff
+      m_LastClickedID: -72538
+      m_ExpandedIDs: 9ed5feff10e8feffb2e8feff8ef0feff3e0fffffe00fffffcc17ffff341effffd61effffb626ffff622dffff042effffd835ffff0c3cffffae3cffff7644ffffca4affff6c4bffff2853ffff9259ffff345affffdc61ffffd67affff787bffffee82ffffd488ffff7689ffffc490ffff1c97ffffbe97ffff1c9fffff2aa5ffffcca5ffff1eadffffbeb4ffff60b5ffffa0bcffff7cc2ffff1ec3ffff36caffff42d0ffffe4d0ffff0cd8ffff40eeffffe2eeffffbef5ffff24fbffff3096000086960000aa960000ba960000f6b900004cba000070ba000080ba0000e0c600005ac700006ac70000b8d500000ed6000032d6000014da00006ada00008eda0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -752,9 +752,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.2909952, y: 1.363844, z: -0.825806}
+    m_Target: {x: 2.2994087, y: 2.6525877, z: -0.87104595}
     speed: 2
-    m_Value: {x: 1.2909952, y: 1.363844, z: -0.825806}
+    m_Value: {x: 2.2994087, y: 2.6525877, z: -0.87104595}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -805,9 +805,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.050287
+    m_Target: 5.9222608
     speed: 2
-    m_Value: 5.050287
+    m_Value: 5.9222608
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -967,9 +967,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 74}
-    m_SelectedIDs: 26700000
-    m_LastClickedID: 28710
-    m_ExpandedIDs: 0000000026700000287000002a7000002c7000002e700000307000003270000034700000367000003870000000ca9a3b
+    m_SelectedIDs: 2e700000
+    m_LastClickedID: 28718
+    m_ExpandedIDs: 000000002e70000030700000327000003470000036700000387000003a7000003c7000003e7000004070000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -997,7 +997,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000026700000287000002a7000002c7000002e700000307000003270000034700000367000003870000000ca9a3b
+    m_ExpandedIDs: 000000002e70000030700000327000003470000036700000387000003a7000003c7000003e70000040700000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1024,7 +1024,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1083,7 +1083,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -204918
+  m_LastSelectedObjectID: -72538
 --- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1182,7 +1182,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 15545
+    ID: 210
     splitterInitialOffset: 266
     currentActiveSplitter: -1
     realSizes:
@@ -1213,9 +1213,9 @@ MonoBehaviour:
       uniqueId: '[Dungeon Dive Remastered][suite]'
       name: Dungeon Dive Remastered
       fullName: Dungeon Dive Remastered
-      resultStatus: 1
-      duration: 0.4965297
-      messages: 
+      resultStatus: 2
+      duration: 0.4197131
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1230,9 +1230,9 @@ MonoBehaviour:
         Dive Remastered/Library/ScriptAssemblies/PlayMode.dll][suite]'
       name: PlayMode.dll
       fullName: C:/Users/firek/OneDrive/Documents/repos/Coding/Dungeon Dive Remastered/Library/ScriptAssemblies/PlayMode.dll
-      resultStatus: 1
-      duration: 0.352563
-      messages: 
+      resultStatus: 2
+      duration: 0.3037734
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1247,7 +1247,7 @@ MonoBehaviour:
       name: DungeonManagerTest
       fullName: DungeonManagerTest
       resultStatus: 1
-      duration: 0.0613436
+      duration: 0.0170395
       messages: 
       output: 
       stacktrace: 
@@ -1264,7 +1264,7 @@ MonoBehaviour:
       name: GenerateDungeon_
       fullName: DungeonManagerTest.GenerateDungeon_
       resultStatus: 1
-      duration: 0.0207863
+      duration: 0.0060408
       messages: 
       output: 
       stacktrace: 
@@ -1280,9 +1280,9 @@ MonoBehaviour:
       uniqueId: PlayMode.dll/[PlayMode][PlayerMovementTest][suite]
       name: PlayerMovementTest
       fullName: PlayerMovementTest
-      resultStatus: 1
-      duration: 0.2863712
-      messages: 
+      resultStatus: 2
+      duration: 0.2824008
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1293,46 +1293,12 @@ MonoBehaviour:
       parentId: 1009
       parentUniqueId: '[PlayMode][C:/Users/firek/OneDrive/Documents/repos/Coding/Dungeon
         Dive Remastered/Library/ScriptAssemblies/PlayMode.dll][suite]'
-    - id: 1014
-      uniqueId: PlayMode.dll/PlayerMovementTest/[PlayMode][PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions_0]
-      name: DistanceBetweenTwoPoints_TilePositions_0
-      fullName: PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions_0
-      resultStatus: 1
-      duration: 0.2422782
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1012
-      parentUniqueId: PlayMode.dll/[PlayMode][PlayerMovementTest][suite]
-    - id: 1007
-      uniqueId: PlayMode.dll/PlayerMovementTest/[PlayMode][PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions_2]
-      name: DistanceBetweenTwoPoints_TilePositions_2
-      fullName: PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions_2
-      resultStatus: 1
-      duration: 0.0098846
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1003
-      parentUniqueId: PlayMode.dll/[PlayMode][PlayerMovementTest][suite]
     - id: 1013
       uniqueId: PlayMode.dll/PlayerMovementTest/[PlayMode][PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions_3]
       name: DistanceBetweenTwoPoints_TilePositions_3
       fullName: PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions_3
       resultStatus: 1
-      duration: 0.0153464
+      duration: 0.2165497
       messages: 
       output: 
       stacktrace: 
@@ -1344,12 +1310,97 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1012
       parentUniqueId: PlayMode.dll/[PlayMode][PlayerMovementTest][suite]
-    - id: 1008
-      uniqueId: PlayMode.dll/PlayerMovementTest/[PlayMode][PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions_4]
-      name: DistanceBetweenTwoPoints_TilePositions_4
-      fullName: PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions_4
+    - id: 1017
+      uniqueId: PlayMode.dll/PlayerMovementTest/[PlayMode][PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions1_0]
+      name: DistanceBetweenTwoPoints_TilePositions1_0
+      fullName: PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions1_0
       resultStatus: 1
-      duration: 0.006727
+      duration: 0.009452
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: PlayMode.dll/[PlayMode][PlayerMovementTest][suite]
+    - id: 1018
+      uniqueId: PlayMode.dll/PlayerMovementTest/[PlayMode][PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions2_5]
+      name: DistanceBetweenTwoPoints_TilePositions2_5
+      fullName: PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions2_5
+      resultStatus: 1
+      duration: 0.0140546
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: PlayMode.dll/[PlayMode][PlayerMovementTest][suite]
+    - id: 1019
+      uniqueId: PlayMode.dll/PlayerMovementTest/[PlayMode][PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions3_2]
+      name: DistanceBetweenTwoPoints_TilePositions3_2
+      fullName: PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions3_2
+      resultStatus: 1
+      duration: 0.0064145
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: PlayMode.dll/[PlayMode][PlayerMovementTest][suite]
+    - id: 1021
+      uniqueId: PlayMode.dll/PlayerMovementTest/[PlayMode][PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions3_3]
+      name: DistanceBetweenTwoPoints_TilePositions3_3
+      fullName: PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions3_3
+      resultStatus: 1
+      duration: 0.0067573
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: PlayMode.dll/[PlayMode][PlayerMovementTest][suite]
+    - id: 1020
+      uniqueId: PlayMode.dll/PlayerMovementTest/[PlayMode][PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions4_4]
+      name: DistanceBetweenTwoPoints_TilePositions4_4
+      fullName: PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions4_4
+      resultStatus: 1
+      duration: 0.0069339
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: PlayMode.dll/[PlayMode][PlayerMovementTest][suite]
+    - id: 1010
+      uniqueId: PlayMode.dll/PlayerMovementTest/[PlayMode][PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions4_5]
+      name: DistanceBetweenTwoPoints_TilePositions4_5
+      fullName: PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions4_5
+      resultStatus: 1
+      duration: 0.0068794
       messages: 
       output: 
       stacktrace: 
@@ -1361,29 +1412,50 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1003
       parentUniqueId: PlayMode.dll/[PlayMode][PlayerMovementTest][suite]
-    - id: 1015
-      uniqueId: PlayMode.dll/PlayerMovementTest/[PlayMode][PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions_5]
-      name: DistanceBetweenTwoPoints_TilePositions_5
-      fullName: PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions_5
-      resultStatus: 1
-      duration: 0.0071597
-      messages: 
+    - id: 1011
+      uniqueId: PlayMode.dll/PlayerMovementTest/[PlayMode][PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions5_5]
+      name: DistanceBetweenTwoPoints_TilePositions5_5
+      fullName: PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions5_5
+      resultStatus: 2
+      duration: 0.0116748
+      messages: "  Expected: 5\r\n  But was:  6\r\n"
       output: 
-      stacktrace: 
+      stacktrace: 'at PlayerMovementTest+<DistanceBetweenTwoPoints_TilePositions5_5>d__8.MoveNext
+        () [0x0006d] in C:\Users\firek\OneDrive\Documents\repos\Coding\Dungeon Dive
+        Remastered\Assets\_Scripts\Tests\PlayMode\PlayerMovementTest.cs:93
+
+        at
+        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in C:\Users\firek\OneDrive\Documents\repos\Coding\Dungeon Dive Remastered\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
+
+'
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1012
+      parentId: 1003
       parentUniqueId: PlayMode.dll/[PlayMode][PlayerMovementTest][suite]
-    m_ResultText: DistanceBetweenTwoPoints_TilePositions_2 (0.010s)
-    m_ResultStacktrace: 
+    m_ResultText: "DistanceBetweenTwoPoints_TilePositions5_5 (0.012s)\n---\nExpected:
+      5\r\n  But was:  6\n---\nat PlayerMovementTest+<DistanceBetweenTwoPoints_TilePositions5_5>d__8.MoveNext
+      () [0x0006d] in C:\\Users\\firek\\OneDrive\\Documents\\repos\\Coding\\Dungeon
+      Dive Remastered\\Assets\\_Scripts\\Tests\\PlayMode\\PlayerMovementTest.cs:93\r\nat
+      UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in
+      C:\\Users\\firek\\OneDrive\\Documents\\repos\\Coding\\Dungeon Dive Remastered\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46"
+    m_ResultStacktrace: 'at PlayerMovementTest+<DistanceBetweenTwoPoints_TilePositions5_5>d__8.MoveNext
+      () [0x0006d] in C:\Users\firek\OneDrive\Documents\repos\Coding\Dungeon Dive
+      Remastered\Assets\_Scripts\Tests\PlayMode\PlayerMovementTest.cs:93
+
+      at
+      UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in
+      C:\Users\firek\OneDrive\Documents\repos\Coding\Dungeon Dive Remastered\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
+
+'
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 884e1f6b
-      m_LastClickedID: 1797213832
+      m_SelectedIDs: dae6388c
+      m_LastClickedID: -1942427942
       m_ExpandedIDs: 345bf5b99fc450ce6dd8ec4fdf634374ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
