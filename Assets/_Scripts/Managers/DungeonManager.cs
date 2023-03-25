@@ -24,4 +24,16 @@ public class DungeonManager : MonoBehaviour
         // the distance between two tiles is the maximum difference between their x and y coordinates
         return Mathf.Max(xDiff, yDiff);
     }
+
+    // Takes in tile coordinates
+    // Returns the Tile component
+    public Tile GetTileFromCoords(float x, float y)
+    {
+        foreach (Tile tile in GameObject.FindObjectsOfType<Tile>())
+        {
+            if (tile.transform.position.x == x && tile.transform.position.y == y)
+                return tile;
+        }
+        return null;
+    }
 }

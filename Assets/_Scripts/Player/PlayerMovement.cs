@@ -8,11 +8,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int moveDistance = 5;
     private bool _dragging = false;
     private Vector3 _mousePos;
+    private Tile _tileBeforeMove;
     private GameObject _ghostToken;
+    private bool _validToken = false;
 
     [Header("References")]
     private GameManager _gameManager;
     private DungeonManager _dungeonManager;
+    private Pathfinding _pathfinding;
+    [SerializeField] private Transform _playerCameraAnchor;
+    [SerializeField] private CameraController _cameraController;
 
 
     private void Start()
@@ -22,6 +27,11 @@ public class PlayerMovement : MonoBehaviour
         GetComponent<CircleCollider2D>().isTrigger = true;
         _gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         _dungeonManager = GameObject.Find("DungeonManager").GetComponent<DungeonManager>();
+        _pathfinding = _dungeonManager.GetComponent<Pathfinding>();
+
+        // < DELETE THIS >
+        // Temporary sets the PlayerToken varriable to a hard coded gameobject
+        _gameManager.PlayerToken = GameObject.FindGameObjectWithTag("Ally");
     }
 
     private void Update()
@@ -36,13 +46,23 @@ public class PlayerMovement : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(_mousePos, -Vector2.up);
 
         // Detect player start dragging
-        if (Input.GetMouseButtonDown(0) && IsValidToken()) TokenDragStart(hit.collider.gameObject.GetComponent<SpriteRenderer>().sprite, hit.collider.gameObject.transform);
+        if (Input.GetMouseButtonDown(0))
+        {
+            _validToken = IsValidToken(hit);
+            if (!_validToken) return;
+            // Set this tile as the start position for dragging
+            _tileBeforeMove = _dungeonManager.GetTileFromCoords(hit.collider.transform.position.x, hit.collider.transform.position.y);
+            TokenDragStart(hit.collider.gameObject.GetComponent<SpriteRenderer>().sprite, hit.collider.gameObject.transform);
+        }
 
         // Detect while player is dragging
         if (_dragging && _gameManager.HasMouseMoved()) TokenDrag();
 
         // Detect player stop dragging
-        if (Input.GetMouseButtonUp(0)) TokenDragEnd();
+        if (Input.GetMouseButtonUp(0) && _validToken) TokenDragEnd(hit);
+
+        // Reset camera position when space is pressed
+        if (Input.GetKeyDown(KeyCode.Space)) ResetPlayerCameraPos();
     }
 
     private void TokenDragStart(Sprite sprite, Transform transform)
@@ -69,9 +89,11 @@ public class PlayerMovement : MonoBehaviour
         _ghostToken.transform.localPosition = new Vector3(0, 0, 0);
     }
 
-    private void TokenDragEnd()
+    private void TokenDragEnd(RaycastHit2D hit)
     {
         _dragging = false;
+        _validToken = false;
+        _pathfinding.GetTargetPath(_tileBeforeMove, hit.collider.GetComponent<Tile>());
         MoveToTile();
         Destroy(_ghostToken);
     }
@@ -83,9 +105,12 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Checks if the token being selected can be moved by this player
-    private bool IsValidToken()
+    public bool IsValidToken(RaycastHit2D hit)
     {
-        return true;
+        if (hit.collider.gameObject == _gameManager.PlayerToken)
+            return true;
+        else
+            return false;
     }
 
     // Checks if a token movement is going to end up in a valid position
@@ -95,5 +120,12 @@ public class PlayerMovement : MonoBehaviour
             return false;
         else
             return true;
+    }
+
+    // Reset camera position
+    private void ResetPlayerCameraPos()
+    {
+        _playerCameraAnchor.localPosition = new Vector2(0, 0);
+        _cameraController.ResetCameraZoom();
     }
 }

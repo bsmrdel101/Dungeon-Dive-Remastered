@@ -92,4 +92,17 @@ public class PlayerMovementTest
         yield return null;
         Assert.AreEqual(5, dungeonManager.DistanceBetweenTwoPoints(tile1, tile2));
     }
+
+    [UnityTest]
+    public IEnumerator IsValidToken_PlayerToken_ReturnsTrue()
+    {
+        GameManager gameManager = GameObject.FindObjectOfType<GameManager>();
+        GameObject playerToken = gameManager.PlayerToken;
+        RaycastHit2D hit = Physics2D.Raycast(playerToken.transform.position, Vector2.zero);
+
+        bool result = playerToken.GetComponent<PlayerMovement>().IsValidToken(hit);
+
+        yield return null;
+        Assert.IsTrue(result);
+    }
 }
