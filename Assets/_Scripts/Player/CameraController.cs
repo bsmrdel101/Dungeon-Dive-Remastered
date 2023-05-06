@@ -11,6 +11,7 @@ public class CameraController : MonoBehaviour
     private float _horizontalMove, _verticalMove;
     private float _mouseScroll = 0f;
     private float _cameraSpeed;
+    public static bool CameraFollowToken = true;
 
     [Header("Camera Zoom")]
     [SerializeField] private float _zoomAmount = 0.5f;
@@ -34,6 +35,7 @@ public class CameraController : MonoBehaviour
 
         // Move camera
         transform.position += new Vector3(_horizontalMove, _verticalMove, 0) * Time.deltaTime * _cameraSpeed;
+        if ((Vector3.Distance(transform.localPosition, new Vector3(0, 0, 0)) > 1.5f)) CameraController.CameraFollowToken = false;
     }
 
     private void GetInputs()
@@ -61,8 +63,9 @@ public class CameraController : MonoBehaviour
     }
 
     // Reset camera zoom
-    public void ResetCameraZoom()
+    public void ResetCameraPos(Transform playerCameraAnchor)
     {
+        transform.localPosition = new Vector2(0, 0);
         _playerCamera.m_Lens.OrthographicSize = _cameraDefaultZoom;
     }
 }

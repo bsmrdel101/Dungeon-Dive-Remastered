@@ -83,17 +83,37 @@ public class PlayerMovement : MonoBehaviour
     private void TokenDrag()
     {
         RaycastHit2D hit = Physics2D.Raycast(_mousePos, -Vector2.up);
-        // Only continue if the tile is a valid place to move
-        if (!hit || hit.collider.tag == "Ally" || hit.collider.tag == "Enemy" || !IsValidMovement(hit.collider.gameObject.GetComponent<Surface>(), hit.collider.gameObject.transform)) return;
-        _ghostToken.transform.SetParent(hit.collider.gameObject.transform);
-        _ghostToken.transform.localPosition = new Vector3(0, 0, 0);
+        Vector3 hitPosition = hit.collider.transform.position;
+        float x = hitPosition.x;
+        float y = hitPosition.y;
+        // Clamp move distance
+        if (_dungeonManager.DistanceBetweenTwoPoints(transform, hit.collider.gameObject.transform) > moveDistance)
+        {
+            float minX = transform.position.x - moveDistance;
+            float minY = transform.position.y - moveDistance;
+            x = Mathf.Clamp(x, minX, transform.position.x + moveDistance);
+            y = Mathf.Clamp(y, minY, transform.position.y + moveDistance);
+        }
+
+        if (!hit || hit.collider.tag == "Ally" || hit.collider.tag == "Enemy") return;
+        if (!IsValidMovement(hit.collider.GetComponent<Surface>(), hit.collider.transform))
+        {
+            // Move it to clamped distance if target is not a valid place to move
+            _ghostToken.transform.SetParent(_dungeonManager.GetTileFromCoords(x, y).transform);
+            _ghostToken.transform.localPosition = Vector3.zero;
+        } else
+        {
+            // Move the target normally
+            _ghostToken.transform.SetParent(hit.collider.gameObject.transform);
+            _ghostToken.transform.localPosition = Vector3.zero;
+        }
     }
 
     private void TokenDragEnd(RaycastHit2D hit)
     {
         _dragging = false;
         _validToken = false;
-        _pathfinding.GetTargetPath(_tileBeforeMove, hit.collider.GetComponent<Tile>());
+        _pathfinding.GetTargetPath(_tileBeforeMove, _ghostToken.gameObject.GetComponentInParent<Tile>());
         MoveToTile();
         Destroy(_ghostToken);
     }
@@ -101,7 +121,10 @@ public class PlayerMovement : MonoBehaviour
     // Moves token to selected position
     private void MoveToTile()
     {
+        Vector3 prevCameraPos = _cameraController.gameObject.transform.position;
         transform.position = _ghostToken.transform.position;
+        // Only move camera with token if it's allowed to
+        if (!CameraController.CameraFollowToken) _cameraController.gameObject.transform.position = prevCameraPos;
     }
 
     // Checks if the token being selected can be moved by this player
@@ -125,7 +148,7 @@ public class PlayerMovement : MonoBehaviour
     // Reset camera position
     private void ResetPlayerCameraPos()
     {
-        _playerCameraAnchor.localPosition = new Vector2(0, 0);
-        _cameraController.ResetCameraZoom();
+        CameraController.CameraFollowToken = true;
+        _cameraController.ResetCameraPos(_playerCameraAnchor);
     }
 }
