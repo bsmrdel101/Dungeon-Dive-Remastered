@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 128
+  controlID: 62
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 129
+  controlID: 63
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -190,8 +190,8 @@ MonoBehaviour:
     y: 0
     width: 244
     height: 560
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 93
+  controlID: 129
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -348,8 +348,8 @@ MonoBehaviour:
     y: 0
     width: 459
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 23}
   m_Panes:
   - {fileID: 23}
@@ -479,9 +479,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d8e6fbff
-      m_LastClickedID: -268584
-      m_ExpandedIDs: 10e4fbff24fbffff146f00006a6f00008e6f0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 606efcffbe72fcff6673fcffac76fcffb076fcffbc84fcfff888fcffa089fcfffa8cfcff128dfcff5ab1fcff8ec2fcff36c3fcff18cafcff1ccafcff92d0fcff3ad1fcff1ed8fcff22d8fcfff4ddfcff9edefcff14e4fcff18e4fcff5213fdffb417fdff5c18fdffd41bfdffd81bfdff6e3cfdff5240fdff6629feff0e2afefff630fefffe30feff5641feff4a59feff245bfeff8a6afeff9e72fefff67bfeffea7efeff4e80feff128efeff4290feffaaa9feff6cb2fefff2b4feff2ebafeffe4c7feffc0c8feff74c9feffa8cdfeffa8cefeff74cffeff9ad3feffa0d4feff2af4feffd6f4feff76fbfeff08fbffff80700000be700000147100001871000038710000c8ca0000d0ca0000daca000044d3000048d300006ad80000dcdf0000d2f5000050020100e40201002008010034080100540b01000e130100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -752,9 +752,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.2994087, y: 2.6525877, z: -0.87104595}
+    m_Target: {x: 3.742057, y: 1.3737524, z: -6.797891}
     speed: 2
-    m_Value: {x: 2.2994087, y: 2.6525877, z: -0.87104595}
+    m_Value: {x: 3.742057, y: 1.3737524, z: -6.797891}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -805,9 +805,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.9222608
+    m_Target: 10.971023
     speed: 2
-    m_Value: 5.9222608
+    m_Value: 10.971023
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -953,23 +953,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/_Scripts/Player
+    - Assets/Resources
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/_Scripts/Player
+  - Assets/Resources
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\firek\OneDrive\Documents\repos\Coding\Dungeon Dive
     Remastered
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 74}
-    m_SelectedIDs: de710000
-    m_LastClickedID: 29150
-    m_ExpandedIDs: 00000000327000003470000036700000387000003a7000003c7000003e70000040700000427000004470000000ca9a3b
+    scrollPos: {x: 0, y: 90}
+    m_SelectedIDs: a2730000
+    m_LastClickedID: 29602
+    m_ExpandedIDs: 00000000ec710000ee710000f0710000f2710000f4710000f6710000f8710000fa710000fc710000fe71000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -997,7 +997,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000327000003470000036700000387000003a7000003c7000003e700000407000004270000044700000
+    m_ExpandedIDs: 00000000ec710000ee710000f0710000f2710000f4710000f6710000f8710000fa710000fc710000fe710000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1083,7 +1083,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -268584
+  m_LastSelectedObjectID: -83392
 --- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1182,7 +1182,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 384
+    ID: 9168
     splitterInitialOffset: 266
     currentActiveSplitter: -1
     realSizes:
@@ -1418,23 +1418,6 @@ MonoBehaviour:
       fullName: PlayerMovementTest.DistanceBetweenTwoPoints_TilePositions5_5
       resultStatus: 1
       duration: 0.0064251
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1003
-      parentUniqueId: PlayMode.dll/[PlayMode][PlayerMovementTest][suite]
-    - id: 1012
-      uniqueId: PlayMode.dll/PlayerMovementTest/[PlayMode][PlayerMovementTest.IsValidToken_PlayerToken_ReturnsTrue]
-      name: IsValidToken_PlayerToken_ReturnsTrue
-      fullName: PlayerMovementTest.IsValidToken_PlayerToken_ReturnsTrue
-      resultStatus: 1
-      duration: 0.0072727
       messages: 
       output: 
       stacktrace: 

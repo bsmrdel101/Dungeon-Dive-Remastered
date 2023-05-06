@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviourPunCallbacks
 {
     [Header("Movement")]
     [SerializeField] private int moveDistance = 5;
@@ -18,10 +19,12 @@ public class PlayerMovement : MonoBehaviour
     private Pathfinding _pathfinding;
     [SerializeField] private Transform _playerCameraAnchor;
     [SerializeField] private CameraController _cameraController;
+    [SerializeField] private PhotonView _playerView;
 
 
     private void Start()
     {
+        if (!_playerView.IsMine) return;
         // If there is some weird problem with colliders it's probably here
         GetComponent<CircleCollider2D>().isTrigger = false;
         GetComponent<CircleCollider2D>().isTrigger = true;
@@ -31,11 +34,12 @@ public class PlayerMovement : MonoBehaviour
 
         // < DELETE THIS >
         // Temporary sets the PlayerToken varriable to a hard coded gameobject
-        _gameManager.PlayerToken = GameObject.FindGameObjectWithTag("Ally");
+        // GameManager.PlayerToken = GameObject.FindGameObjectWithTag("Ally");
     }
 
     private void Update()
     {
+        if (!_playerView.IsMine) return;
         HandlePlayerMovement();
     }
 
@@ -83,6 +87,8 @@ public class PlayerMovement : MonoBehaviour
     private void TokenDrag()
     {
         RaycastHit2D hit = Physics2D.Raycast(_mousePos, -Vector2.up);
+        if (!hit || !IsValidMovement(hit.collider.GetComponent<Surface>(), hit)) return;
+
         Vector3 hitPosition = hit.collider.transform.position;
         float x = hitPosition.x;
         float y = hitPosition.y;
@@ -95,8 +101,7 @@ public class PlayerMovement : MonoBehaviour
             y = Mathf.Clamp(y, minY, transform.position.y + moveDistance);
         }
 
-        if (!hit || hit.collider.tag == "Ally" || hit.collider.tag == "Enemy") return;
-        if (!IsValidMovement(hit.collider.GetComponent<Surface>(), hit.collider.transform))
+        if (_dungeonManager.DistanceBetweenTwoPoints(transform, hit.collider.transform) > moveDistance)
         {
             // Move it to clamped distance if target is not a valid place to move
             _ghostToken.transform.SetParent(_dungeonManager.GetTileFromCoords(x, y).transform);
@@ -130,16 +135,16 @@ public class PlayerMovement : MonoBehaviour
     // Checks if the token being selected can be moved by this player
     public bool IsValidToken(RaycastHit2D hit)
     {
-        if (hit.collider.gameObject == _gameManager.PlayerToken)
+        if (hit && hit.collider.gameObject == GameManager.PlayerToken)
             return true;
         else
             return false;
     }
 
     // Checks if a token movement is going to end up in a valid position
-    private bool IsValidMovement(Surface surface, Transform tilePos)
+    private bool IsValidMovement(Surface surface, RaycastHit2D hit)
     {
-        if (!surface.IsWalkable || _dungeonManager.DistanceBetweenTwoPoints(transform, tilePos) > moveDistance)
+        if (!surface || !surface.IsWalkable)
             return false;
         else
             return true;
