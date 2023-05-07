@@ -102,7 +102,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDistance: 3
-  _playerCameraAnchor: {fileID: 9083632649384795255}
   _cameraController: {fileID: 1015857548323840796}
   _playerView: {fileID: 5780116915468150300}
 --- !u!58 &9099742193148660923

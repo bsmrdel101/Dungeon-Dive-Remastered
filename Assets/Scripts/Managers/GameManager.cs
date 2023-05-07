@@ -3,11 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class GameManager : MonoBehaviourPunCallbacks
+public class GameManager : MonoBehaviour
 {
-    [Header("Progression")]
-    public static int Floor = 1;
-
     [Header("Player")]
     [HideInInspector] public static GameObject PlayerToken;
 
@@ -19,6 +16,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     
     private void Start()
     {
+        DontDestroyOnLoad(this.gameObject);
         if (!_gameManagerView.IsMine)
         {
             // _playerCamera.SetActive(false);
@@ -26,7 +24,7 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
 
         // Spawn player
-        PlayerToken = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity);
+        // PlayerToken = PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity);
     }
 
     // Returns if mouse has changed position or not

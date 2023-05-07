@@ -25,6 +25,8 @@ public class CameraController : MonoBehaviour
     {
         _cameraSpeed = _cameraDefaultSpeed;
         _playerCamera = GameObject.Find("PlayerCamera").GetComponent<CinemachineVirtualCamera>();
+        _playerCamera.Follow = transform;
+        _playerCamera.LookAt = transform;
     }
 
     private void Update()
@@ -63,7 +65,7 @@ public class CameraController : MonoBehaviour
     }
 
     // Reset camera zoom
-    public void ResetCameraPos(Transform playerCameraAnchor)
+    public void ResetCameraPos()
     {
         transform.localPosition = new Vector2(0, 0);
         _playerCamera.m_Lens.OrthographicSize = _cameraDefaultZoom;

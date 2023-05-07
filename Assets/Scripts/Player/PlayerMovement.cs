@@ -17,7 +17,6 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
     private GameManager _gameManager;
     private DungeonManager _dungeonManager;
     private Pathfinding _pathfinding;
-    [SerializeField] private Transform _playerCameraAnchor;
     [SerializeField] private CameraController _cameraController;
     [SerializeField] private PhotonView _playerView;
 
@@ -154,6 +153,6 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
     private void ResetPlayerCameraPos()
     {
         CameraController.CameraFollowToken = true;
-        _cameraController.ResetCameraPos(_playerCameraAnchor);
+        _cameraController.ResetCameraPos();
     }
 }

@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class DungeonManager : MonoBehaviour
 {
-    [Header("Dungeon")]
-    [SerializeField] private GameObject[] _roomPrefabList;
+    [Header("Progression")]
+    public int Floor = 1;
+    public int Area = 1;
+
+    [Header("Rooms")]
+    public GameObject[] FloorOneStartingRooms;
+    public GameObject[] FloorOneRooms;
+    public GameObject[] FloorTwoStartingRooms;
+    public GameObject[] FloorTwoRooms;
+    public GameObject[] FloorThreeStartingRooms;
+    public GameObject[] FloorThreeRooms;
 
 
     private void Start()
     {
-        
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Takes in two tile positions
